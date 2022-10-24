@@ -30,5 +30,5 @@ function createBoxes(amount) {
 buttonDestroy.addEventListener("click", destroyBoxes);
 
 function destroyBoxes() {
-  div.querySelectorAll("div").forEach((item) => item.remove());
+  div.innerHTML = "";
 }

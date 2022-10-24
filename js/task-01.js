@@ -1,10 +1,10 @@
 const listRef = document.querySelector("ul");
 console.log(listRef);
 
-const itemRef = listRef.children;
-console.log(itemRef);
+const item = listRef.children;
+const itemRef = [...item];
 
-for (const item of itemRef) {
+itemRef.forEach((item) => {
   console.log(`Category: ${item.querySelector("h2").textContent}`);
   console.log(`Elements: ${item.querySelectorAll("ul li").length}`);
-}
+});

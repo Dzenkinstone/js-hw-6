@@ -7,11 +7,10 @@ function onButtonClick(event) {
 
   const { email, password } = event.currentTarget.elements;
   if (email.value.length === 0 || password.value.length === 0) {
-    alert("Всі поля повинні бути заповнені");
-  } else {
-    console.log(
-      `${email.name}: ${email.value}, ${password.name}: ${password.value}`
-    );
-    event.currentTarget.reset();
+    return alert("Всі поля повинні бути заповнені");
   }
+  console.log(
+    `${email.name}: ${email.value}, ${password.name}: ${password.value}`
+  );
+  event.currentTarget.reset();
 }
